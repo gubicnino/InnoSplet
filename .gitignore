@@ -1,5 +1,3 @@
-docker-compose.yml
-
 # Config folder
 Config/config.php
 Config/email-config.php
