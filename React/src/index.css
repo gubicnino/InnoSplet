@@ -1,0 +1,62 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #09090b;
+  --color-surface: #18181b;
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #06b6d4;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #27272a;
+  --color-muted-foreground: #a1a1aa;
+  --color-border: rgba(255, 255, 255, 0.1);
+  
+  --font-family-sans: 'Inter', sans-serif;
+  
+  --animate-fade-in: fadeIn 0.5s ease-out;
+  --animate-slide-up: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  @apply bg-background text-zinc-100 font-sans antialiased;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-zinc-800 rounded-full border-2 border-background;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-zinc-700;
+}
+
+/* Focus styles */
+:focus-visible {
+  @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background;
+}
+
