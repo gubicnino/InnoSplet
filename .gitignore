@@ -1,7 +1,8 @@
 docker-compose.yml
 
 # Config folder
-Config/
+Config/config.php
+Config/email-config.php
 
 # Dependencies
 React/node_modules/
