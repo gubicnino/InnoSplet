@@ -40,7 +40,7 @@ export function ReferencesPreview() {
   if (loading) return <div>Nalaganje...</div>;
   
   return (
-    <section className="py-24 bg-surface/30">
+    <section className="py-32">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <SectionHeading
           title="Naše delo"

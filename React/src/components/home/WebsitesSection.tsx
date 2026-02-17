@@ -30,11 +30,9 @@ const solutions = [
 
 export function WebsitesSection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-surface/30 relative overflow-hidden">
+    <section className="py-32 to-surface/30 relative ">
       {/* Decorative elements */}
-      <div className="absolute inset-0 bg-grid-white/[0.02] bg-[size:50px_50px]" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
+ 
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">

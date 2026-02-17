@@ -32,7 +32,7 @@ const benefits = [
 ]
 
 export function WhyUsSection() {
-    const [stProjektov, setStProjektov] = useState<number>(0);
+    const [stProjektov, setStProjektov] = useState<number>(7);
     const [loading, setLoading] = useState(true);
   
     useEffect(() => {

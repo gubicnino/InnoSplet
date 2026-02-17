@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
 import { CTASection } from '../components/home/CTASection'
-import { ProjectCard, type Project } from '../components/references/ProjectCard'
+import { ProjectCard } from '../components/references/ProjectCard'
+import { PageHeading } from '../components/ui/PageHeading'
 import { SectionHeading } from '../components/ui/SectionHeading'
+import type { Project } from '../types/project'
 
 // Barve za rotacijo
 const projectColors = [
@@ -44,6 +46,7 @@ export function ReferencesPage() {
 
   return (
     <>
+      <PageHeading title="Reference" />
       <div className="pt-12 pb-24 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
         <SectionHeading
           title="Naše reference"

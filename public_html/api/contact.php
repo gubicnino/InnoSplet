@@ -1,4 +1,16 @@
 <?php
+// CORS headers must come first before any potential errors
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type');
+header('Content-Type: application/json');
+
+// Handle preflight OPTIONS request
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit;
+}
+
 // Load Composer autoloader
 require_once __DIR__ . '/../../vendor/autoload.php';
 
@@ -7,17 +19,6 @@ $emailConfig = require __DIR__ . '/../../Config/email-config.php';
 
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
-header('Content-Type: application/json');
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
-
-// Handle preflight OPTIONS request
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    http_response_code(200);
-    exit;
-}
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
@@ -87,29 +88,31 @@ $html_message = '
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            background-color: #f5f5f5;
+            color: #e4e4e7;
+            background-color: #09090b;
             margin: 0;
             padding: 0;
         }
         .container {
             max-width: 600px;
             margin: 20px auto;
-            background-color: #ffffff;
-            border-radius: 8px;
+            background-color: #18181b;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
             color: #ffffff;
-            padding: 30px;
+            padding: 40px 30px;
             text-align: center;
         }
         .header h1 {
             margin: 0;
-            font-size: 24px;
-            font-weight: 600;
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
         .content {
             padding: 30px;
@@ -119,46 +122,52 @@ $html_message = '
         }
         .field-label {
             font-weight: 600;
-            color: #667eea;
-            font-size: 12px;
+            color: #3b82f6;
+            font-size: 11px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
         }
         .field-value {
-            background-color: #f8f9fa;
-            padding: 12px 15px;
-            border-radius: 6px;
-            border-left: 3px solid #667eea;
+            background-color: #27272a;
+            padding: 14px 16px;
+            border-radius: 8px;
+            border-left: 3px solid #3b82f6;
             word-wrap: break-word;
+            color: #fafafa;
         }
         .message-box {
-            background-color: #f8f9fa;
-            padding: 15px;
-            border-radius: 6px;
-            border-left: 3px solid #667eea;
+            background-color: #27272a;
+            padding: 16px;
+            border-radius: 8px;
+            border-left: 3px solid #3b82f6;
             white-space: pre-wrap;
             word-wrap: break-word;
+            color: #fafafa;
+            line-height: 1.7;
         }
         .footer {
-            background-color: #f8f9fa;
+            background-color: #18181b;
             padding: 20px;
             text-align: center;
-            color: #6c757d;
+            color: #a1a1aa;
             font-size: 12px;
-            border-top: 1px solid #e9ecef;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         .timestamp {
-            color: #6c757d;
+            color: #a1a1aa;
             font-size: 13px;
-            margin-top: 10px;
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>📧 Nova kontaktna zahteva</h1>
+            <h1>Novo Povpraševanje</h1>
         </div>
         
         <div class="content">
@@ -170,7 +179,7 @@ $html_message = '
             <div class="field">
                 <div class="field-label">Email naslov</div>
                 <div class="field-value">
-                    <a href="mailto:' . $email . '" style="color: #667eea; text-decoration: none;">' . $email . '</a>
+                    <a href="mailto:' . $email . '" style="color: #3b82f6; text-decoration: none;">' . $email . '</a>
                 </div>
             </div>
             

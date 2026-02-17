@@ -1,4 +1,4 @@
-import { Code2, Github, Linkedin, Mail, MapPin, Twitter } from 'lucide-react'
+import { Code2, Github, Mail, Phone } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 export function Footer() {
@@ -18,26 +18,14 @@ export function Footer() {
             </Link>
             <p className="text-zinc-400 max-w-xs leading-relaxed">
               Gradimo sodobne digitalne izkušnje, ki spodbujajo rast
-              ambicioznih podjetij po vsem svetu.
+              ambicioznih podjetij.
             </p>
             <div className="flex items-center gap-4 pt-2">
               <a
-                href="#"
+                href="https://github.com/gubicnino"
                 className="text-zinc-500 hover:text-white transition-colors"
               >
                 <Github className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-zinc-500 hover:text-white transition-colors"
-              >
-                <Linkedin className="w-5 h-5" />
-              </a>
-              <a
-                href="#"
-                className="text-zinc-500 hover:text-white transition-colors"
-              >
-                <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
@@ -70,11 +58,6 @@ export function Footer() {
                   Kontaktirajte nas
                 </Link>
               </li>
-              <li>
-                <span className="text-zinc-600 cursor-not-allowed">
-                  Kariera (kmalu odpiramo)
-                </span>
-              </li>
             </ul>
           </div>
 
@@ -85,19 +68,20 @@ export function Footer() {
               <li className="flex items-start gap-3 text-zinc-400">
                 <Mail className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <a
-                  href="mailto:hello@innosplet.com"
+                  href="mailto:info@innosplet.com"
                   className="hover:text-white transition-colors"
                 >
-                  hello@innosplet.com
+                  info@innosplet.com
                 </a>
               </li>
               <li className="flex items-start gap-3 text-zinc-400">
-                <MapPin className="w-5 h-5 text-primary shrink-0 mt-0.5" />
-                <span>
-                  Agencija na daljavo
-                  <br />
-                  Služimo strankam po vsem svetu
-                </span>
+                <Phone className="w-5 h-5 text-primary shrink-0 mt-0.5" />
+                <a
+                  href="tel:+38631686628"
+                  className="hover:text-white transition-colors"
+                >
+                  +386 31 686 628
+                </a>
               </li>
             </ul>
           </div>
@@ -105,14 +89,14 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-zinc-500">
-          <p>&copy; {currentYear} InnoSplet Agencija. Vse pravice pridržane.</p>
+          <p>&copy; {currentYear} InnoSplet</p>
           <div className="flex gap-6">
-            <a href="#" className="hover:text-white transition-colors">
+            <Link to="/privacy-policy" className="hover:text-white transition-colors">
               Politika zasebnosti
-            </a>
-            <a href="#" className="hover:text-white transition-colors">
+            </Link>
+            <Link to="/terms-of-use" className="hover:text-white transition-colors">
               Pogoji uporabe
-            </a>
+            </Link>
           </div>
         </div>
       </div>
