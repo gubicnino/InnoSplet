@@ -26,20 +26,20 @@ export function HomePage() {
         />
       </div>
       
-      <div className="relative isolate">
+      <div className="relative isolate  w-full pt-12 pb-24 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
         {/* Dekorativni elementi - ne vplivajo na interakcijo */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           {/* Glavni blur krogi */}
-          <div className="absolute top-32 left-1/4 w-[500px] h-[500px] bg-primary/20 rounded-full blur-3xl" />
-          <div className="absolute bottom-32 right-1/4 w-[500px] h-[500px] bg-secondary/20 rounded-full blur-3xl" />
+          <div className="absolute top-32 left-1/4 w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-primary/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-32 right-1/4 w-[40vw] h-[40vw] max-w-[500px] max-h-[500px] bg-secondary/20 rounded-full blur-3xl" />
           
           {/* Dodatni barvni akcenti */}
-          <div className="absolute top-[1200px] left-1/3 w-[450px] h-[450px] bg-primary/20 rounded-full blur-3xl" />
-          <div className="absolute top-[1600px] right-1/4 w-80 h-80 bg-indigo-500/12 rounded-full blur-3xl" />
+          <div className="absolute top-[1200px] left-1/3 w-[35vw] h-[35vw] max-w-[450px] max-h-[450px] bg-primary/20 rounded-full blur-3xl" />
+          <div className="absolute top-[1600px] right-1/4 w-[25vw] h-[25vw] max-w-[320px] max-h-[320px] bg-indigo-500/12 rounded-full blur-3xl" />
           
           {/* Manjši highlight krogi */}
-          <div className="absolute top-[400px] right-[15%] w-64 h-64 bg-primary/25 rounded-full blur-2xl" />
-          <div className="absolute top-[1000px] left-[10%] w-72 h-72 bg-secondary/20 rounded-full blur-2xl" />
+          <div className="absolute top-[400px] right-[15%] w-[20vw] h-[20vw] max-w-[256px] max-h-[256px] bg-primary/25 rounded-full blur-2xl" />
+          <div className="absolute top-[1000px] left-[10%] w-[22vw] h-[22vw] max-w-[288px] max-h-[288px] bg-secondary/20 rounded-full blur-2xl" />
         </div>
         <WebsitesSection />
         <ServicesSection />

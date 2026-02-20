@@ -12,7 +12,7 @@ export function PageHeading({
   className = '',
 }: PageHeadingProps) {
   return (
-    <div className={`mb-12 md:mb-16 ${align === 'center' ? 'text-center' : 'text-left'} ${className} py-24 px-4 md:px-6 lg:px-8 bg-primary`} >
+    <div className={`mb-12 md:mb-16 ${align === 'center' ? 'text-center' : 'text-left'} ${className} py-14 md:py-16 lg:py-24 px-4 md:px-6 lg:px-8 bg-primary`} >
       <motion.h2
         initial={{
           opacity: 0,

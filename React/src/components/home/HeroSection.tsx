@@ -46,7 +46,7 @@ export function HeroSection() {
             duration: 0.6,
             delay: 0.1,
           }}
-          className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]"
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.1]"
         >
           Gradimo digitalne izkušnje, ki{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
@@ -67,7 +67,7 @@ export function HeroSection() {
             duration: 0.6,
             delay: 0.2,
           }}
-          className="text-xl md:text-2xl text-zinc-400 mb-10 max-w-3xl mx-auto leading-relaxed"
+          className="text-base sm:text-lg md:text-xl lg:text-2xl text-zinc-400 mb-10 max-w-3xl mx-auto leading-relaxed"
         >
           InnoSplet pomaga malim in srednje velikim podjetjem pri razvoju sodobnih,
           visoko zmogljivih spletnih aplikacij — pravočasno in v okviru proračuna.

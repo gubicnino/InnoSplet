@@ -25,7 +25,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-32  relative">
+    <section className="py-16 md:py-24 lg:py-32 relative">
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         <SectionHeading
           title="Naš pristop"

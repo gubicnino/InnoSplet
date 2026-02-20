@@ -30,12 +30,12 @@ const solutions = [
 
 export function WebsitesSection() {
   return (
-    <section className="py-32 to-surface/30 relative ">
+    <section className="py-16 md:py-24 lg:py-32 to-surface/30 relative ">
       {/* Decorative elements */}
  
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
           {/* Left side - Content */}
           <AnimatedSection>
             <div className="space-y-6">
@@ -45,7 +45,7 @@ export function WebsitesSection() {
                 </span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight">
                 Od ideje do
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
                   {' '}spletne uspešnice

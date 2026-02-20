@@ -18,7 +18,7 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-background text-zinc-100 font-sans">
       <Header />
-      <main className="flex-grow pt-20">{children}</main>
+      <main className="flex-grow pt-20 w-full">{children}</main>
       <Footer />
     </div>
   )

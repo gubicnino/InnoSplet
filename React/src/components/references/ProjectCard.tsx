@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import type { Project } from '../../types/project'
 
 interface ProjectCardProps {
@@ -9,24 +10,25 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-        y: 20,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
-      viewport={{
-        once: true,
-      }}
-      transition={{
-        duration: 0.5,
-        delay: index * 0.1,
-      }}
-      className="group relative bg-surface rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1"
-    >
+    <Link to={`/projects/${project.id}`}>
+      <motion.div
+        initial={{
+          opacity: 0,
+          y: 20,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+        }}
+        viewport={{
+          once: true,
+        }}
+        transition={{
+          duration: 0.5,
+          delay: index * 0.1,
+        }}
+        className="group relative bg-surface rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all duration-300 hover:-translate-y-1 cursor-pointer"
+      >
       {/* Project Image */}
       <div className="relative h-48 w-full overflow-hidden bg-zinc-900">
         {project.thumbnail_url ? (
@@ -54,9 +56,10 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
           <ArrowUpRight className="w-5 h-5 opacity-0 group-hover:opacity-100 transition-opacity text-primary transform group-hover:translate-x-1 group-hover:-translate-y-1" />
         </h3>
         <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
-          {project.description}
+          {project.short_description}
         </p>
       </div>
     </motion.div>
+    </Link>
   )
 }

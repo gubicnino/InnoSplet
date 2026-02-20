@@ -20,3 +20,8 @@ export const sendContactMessage = async (data: { name: string; email: string; me
   const response = await api.post('/contact.php', data)
   return response.data
 }
+
+export const getProjectById = async (id: string) => {
+  const response = await api.get(`/project-id.php?id=${id}`)
+  return response.data
+}
