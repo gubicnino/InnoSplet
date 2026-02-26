@@ -21,7 +21,7 @@ export function HomePage() {
           frequency={1}
           warpStrength={1}
           mouseInfluence={0}
-          parallax={1}
+          parallax={0}
           noise={0}
         />
       </div>

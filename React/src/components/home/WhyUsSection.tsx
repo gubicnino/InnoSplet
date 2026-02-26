@@ -9,13 +9,13 @@ const benefits = [
     icon: <Clock className="w-6 h-6 text-primary" />,
     title: 'Zanesljiva dostava',
     description:
-      'Izpolnjujemo roke. Vsak projekt vsebuje jasne mejnike in transparentno komunikacijo.',
+      'Vaš projekt bo dostavljen pravočasno. Jasni mejniki in odprta komunikacija skozi celoten proces.',
   },
   {
     icon: <Zap className="w-6 h-6 text-secondary" />,
     title: 'Zmogljivost na prvem mestu',
     description:
-      'Bliščeče hitre aplikacije, optimizirane za hitrost, SEO in uporabniško izkušnjo.',
+      'Aplikacije optimizirane za hitrost, SEO in uporabniško izkušnjo.',
   },
   {
     icon: <Cpu className="w-6 h-6 text-primary" />,
