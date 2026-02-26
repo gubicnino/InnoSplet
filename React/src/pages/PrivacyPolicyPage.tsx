@@ -10,7 +10,7 @@ export function PrivacyPolicyPage() {
             {/* Uvod */}
             <section>
               <p className="text-lg leading-relaxed">
-                InnoSplet, s. p. (v nadaljevanju "InnoSplet", "mi", "naš" ali "nam") spoštuje vašo zasebnost in se zavezuje k zaščiti vaših osebnih podatkov. Ta politika zasebnosti pojasnjuje, kako zbiramo, uporabljamo, razkrivamo in varujemo vaše osebne podatke v skladu z Uredbo (EU) 2016/679 Evropskega parlamenta in Sveta (Splošna uredba o varstvu podatkov - GDPR) in Zakonom o varstvu osebnih podatkov (ZVOP-2).
+                Računalniško programiranje, Štefka Gubič s.p. (v nadaljevanju "InnoSplet", "mi", "naš" ali "nam") spoštuje vašo zasebnost in se zavezuje k zaščiti vaših osebnih podatkov. Ta politika zasebnosti pojasnjuje, kako zbiramo, uporabljamo, razkrivamo in varujemo vaše osebne podatke v skladu z Uredbo (EU) 2016/679 Evropskega parlamenta in Sveta (Splošna uredba o varstvu podatkov - GDPR) in Zakonom o varstvu osebnih podatkov (ZVOP-2).
               </p>
               <p className="text-sm text-zinc-400 mt-4">
                 Zadnja posodobitev: {new Date().toLocaleDateString('sl-SI')}

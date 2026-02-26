@@ -142,12 +142,12 @@ export default function ProjectDetails() {
             </div>
           </div>
 
-          {/* Main Image */}
+          {/* Thumbnail Image */}
           {project.image_url && (
             <AnimatedSection>
               <div className="mb-16 rounded-2xl overflow-hidden border border-white/5">
                 <img
-                    src={`/images/projects/${project.thumbnail_url}`}
+                    src={`/images/projects/${project.prefix}/${project.thumbnail_url}`}
                     alt={project.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -164,7 +164,7 @@ export default function ProjectDetails() {
                   {project.gallery.map((image, idx) => (
                     <div key={idx} className="rounded-xl overflow-hidden border border-white/5">
                       <img
-                        src={`/images/projects/${image}`}
+                        src={`/images/projects/${project.prefix}/${image}`}
                         alt={`${project.title} - ${idx + 1}`}
                         className="w-full h-auto"
                       />

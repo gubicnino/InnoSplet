@@ -10,7 +10,7 @@ export function TermsOfUsePage() {
             {/* Uvod */}
             <section>
               <p className="text-lg leading-relaxed">
-                Ti splošni pogoji uporabe urejajo uporabo spletne strani www.innosplet.com in storitev, ki jih nudi InnoSplet, s. p. (v nadaljevanju "InnoSplet", "ponudnik", "mi" ali "naš"). Z dostopom in uporabo te spletne strani se strinjate s temi pogoji. Prosimo, da jih pozorno preberete.
+                Ti splošni pogoji uporabe urejajo uporabo spletne strani www.innosplet.com in storitev, ki jih nudi Računalniško programiranje, Štefka Gubič s.p. (v nadaljevanju "InnoSplet", "ponudnik", "mi" ali "naš"). Z dostopom in uporabo te spletne strani se strinjate s temi pogoji. Prosimo, da jih pozorno preberete.
               </p>
               <p className="text-sm text-zinc-400 mt-4">
                 Zadnja posodobitev: {new Date().toLocaleDateString('sl-SI')}

@@ -20,6 +20,7 @@ export interface Project {
   is_active: boolean
   featured: boolean
   order_position: number
+  prefix: string | null
   
   color?: string
 }

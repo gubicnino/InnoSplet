@@ -33,7 +33,7 @@ export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
       <div className="relative h-48 w-full overflow-hidden bg-zinc-900">
         {project.thumbnail_url ? (
           <img
-            src={`/images/projects/${project.thumbnail_url}`}
+            src={`/images/projects/${project.prefix}/${project.thumbnail_url}`}
             alt={project.title}
             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
           />
