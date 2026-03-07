@@ -3,6 +3,7 @@ import { CTASection } from '../components/home/CTASection'
 import { HeroSection } from '../components/home/HeroSection'
 import { ReferencesPreview } from '../components/home/ReferencesPreview'
 import { ServicesSection } from '../components/home/ServicesSection'
+import { TestimonialsSection } from '../components/home/TestimonialsSection'
 import { WebsitesSection } from '../components/home/WebsitesSection'
 import { WhyUsSection } from '../components/home/WhyUsSection'
 
@@ -41,6 +42,7 @@ export function HomePage() {
           <div className="absolute top-[400px] right-[15%] w-[20vw] h-[20vw] max-w-[256px] max-h-[256px] bg-primary/25 rounded-full blur-2xl" />
           <div className="absolute top-[1000px] left-[10%] w-[22vw] h-[22vw] max-w-[288px] max-h-[288px] bg-secondary/20 rounded-full blur-2xl" />
         </div>
+        <TestimonialsSection />
         <WebsitesSection />
         <ServicesSection />
         <WhyUsSection />
