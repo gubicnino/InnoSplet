@@ -143,7 +143,7 @@ export default function ProjectDetails() {
           </div>
 
           {/* Thumbnail Image */}
-          {project.image_url && (
+          {project.thumbnail_url && (
             <AnimatedSection>
               <div className="mb-16 rounded-2xl overflow-hidden border border-white/5">
                 <img

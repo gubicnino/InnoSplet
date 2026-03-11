@@ -1,13 +1,9 @@
-import React, { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import { Footer } from './Footer'
 import { Header } from './Header'
 
-interface LayoutProps {
-  children: React.ReactNode
-}
-
-export function Layout({ children }: LayoutProps) {
+export function Layout() {
   const { pathname } = useLocation()
 
   // Scroll to top on route change
@@ -18,7 +14,9 @@ export function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen flex flex-col bg-background text-zinc-100 font-sans">
       <Header />
-      <main className="flex-grow pt-20 w-full">{children}</main>
+      <main className="flex-grow pt-20 w-full">
+        <Outlet />
+      </main>
       <Footer />
     </div>
   )

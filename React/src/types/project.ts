@@ -6,7 +6,6 @@ export interface Project {
   long_description: string | null
   industry: string
   category: string | null
-  image_url: string | null
   thumbnail_url: string | null
   gallery: string[] | null 
   client_name: string | null
