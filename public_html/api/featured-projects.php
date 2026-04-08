@@ -3,7 +3,7 @@
 header('Content-Type: application/json');
 header('Access-Control-Allow-Origin: *');
 
-require_once __DIR__ . '/../../includes/Database.php';
+require_once __DIR__ . '/../../Includes/Database.php';
 
 try {
     $db = Database::getInstance();

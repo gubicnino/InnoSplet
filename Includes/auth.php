@@ -8,7 +8,7 @@ function startAdminSession(): void
             'path' => '/',
             'httponly' => true,
             'samesite' => 'Lax',
-            'secure' => false, // Set to true in production with HTTPS
+            'secure' => true, // HTTPS on production
         ]);
         session_start();
     }

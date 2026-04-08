@@ -2,7 +2,7 @@ import axios from 'axios'
 import type { Project } from '../types/project'
 
 const adminApi = axios.create({
-  baseURL: 'http://localhost:8000/api/admin',
+  baseURL: '/api/admin',
   headers: { 'Content-Type': 'application/json' },
   withCredentials: true,
 })

@@ -239,8 +239,8 @@ export function ProjectFormPage() {
       challenge: form.challenge || null,
       solution: form.solution || null,
       results: form.results || null,
-      is_active: form.is_active ? 1 : 0,
-      featured: form.featured ? 1 : 0,
+      is_active: !!form.is_active,
+      featured: !!form.featured,
       order_position: Number(form.order_position) || 0,
       prefix: form.prefix,
     }
